@@ -11,10 +11,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120108014034) do
+ActiveRecord::Schema.define(:version => 20120108065550) do
+
+  create_table "bad_points", :force => true do |t|
+    t.text     "text"
+    t.integer  "idea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bad_points", ["idea_id"], :name => "index_bad_points_on_idea_id"
+
+  create_table "consideration_points", :force => true do |t|
+    t.text     "text"
+    t.integer  "idea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "consideration_points", ["idea_id"], :name => "index_consideration_points_on_idea_id"
 
   create_table "good_points", :force => true do |t|
     t.text     "text"
+    t.integer  "idea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "good_points", ["idea_id"], :name => "index_good_points_on_idea_id"
+
+  create_table "ideas", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.boolean  "is_private"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
