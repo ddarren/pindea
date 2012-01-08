@@ -1,28 +1,35 @@
+$footer-height: 2em;
+
 html, body {
 	height: 100%;
 }
 
-#body
-{
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -4em; // the last value must equal the height in .push
-	position: relative;
-}
+#layout-body-wrapper {min-height: 100%;}
 
-#footer
-{
+#body {
+	overflow:auto;
+	padding-bottom: $footer-height; /* must be same height as the footer */
+
+}  
+
+#footer {
+	position: relative;
+	margin-top: -$footer-height; /* negative value of footer height */
+	height: $footer-height;
+	clear:both;
 	font-size: .9em;
 	background-color: #F6F6F6;
 	text-align: center;
 	position: relative;
-	//	padding: .5em 0 0 0;
-}
- 
-#footer, #push-footer-to-bottom
-{
-	height: 4em; // this must equal the last value in .body margin
-	clear: both;
+	line-height: $footer-height;
+} 
 
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;
 }
+
