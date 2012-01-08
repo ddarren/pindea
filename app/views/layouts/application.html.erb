@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Fantadea</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<h1>Fantadea</h1>
-<%= yield %>
-
-</body>
+	<head>
+	  <title>Fantadea</title>
+	  <%= stylesheet_link_tag    "application" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="body">
+			<h1>Fantadea</h1>
+			<%= yield %>
+		</div>
+		<div id="push-footer-to-bottom"></div>
+		<div id="footer">Copyright Fantadea.com</div>
+		
+	</body>
 </html>
