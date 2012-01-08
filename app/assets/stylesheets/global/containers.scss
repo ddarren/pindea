@@ -1,0 +1,16 @@
+.good-container, .bad-container, .neutral-container, .idea-container
+{
+	border-radius: 15px;
+	border: 2px solid black;
+	padding: 5px 10px 5px 10px;
+	margin-bottom: 10px;
+
+}
+
+.good-container {
+	background-color: #BCE3BF;
+}
+
+.idea-container {
+	background-color: #FCFCD5;
+}

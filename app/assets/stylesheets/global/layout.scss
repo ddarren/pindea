@@ -1,0 +1,28 @@
+html, body {
+	height: 100%;
+}
+
+#body
+{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em; // the last value must equal the height in .push
+	position: relative;
+}
+
+#footer
+{
+	font-size: .9em;
+	background-color: #F6F6F6;
+	text-align: center;
+	position: relative;
+	//	padding: .5em 0 0 0;
+}
+ 
+#footer, #push-footer-to-bottom
+{
+	height: 4em; // this must equal the last value in .body margin
+	clear: both;
+
+}
