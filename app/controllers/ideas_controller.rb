@@ -1,6 +1,10 @@
 class IdeasController < ApplicationController
-  def new
-     
+
+  
+  def create
+    @idea = Idea.new(params[:idea])
+    @idea.save
+    render :action => "new"
   end
   
 end

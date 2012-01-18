@@ -1,6 +1,7 @@
-<%= form_tag ideas_path do %>
-	<%= label_tag :name %>
-	<%= text_field_tag :name %>
-	<%= label_tag :description %>
-	<%= text_area_tag :description %>
+<%= form_for Idea.new, :remote => true do |i| %>
+	<%= i.label :name, "Name" %>
+	<%= i.text_field :name %>
+	<%= i.label :description, "Description" %>
+	<%= i.text_area :description %>
+	<%= i.submit "Add" %>
 <% end %>
