@@ -1,7 +1,9 @@
-<%= form_for Idea.new, :remote => true do |i| %>
-	<%= i.label :name, "Name" %>
-	<%= i.text_field :name %>
-	<%= i.label :description, "Description" %>
-	<%= i.text_area :description %>
+<%= form_for Idea.new, :remote => true, :html => {  :class => "form-stacked" } do |i| %>
+	<div class="clearfix">
+		<%= i.label :name, "Give your idea a name" %>
+		<%= i.text_field :name %>
+	</div>
+	<%= i.label :description, "Describe your idea" %>
+	<%= i.text_area :description, :rows => 10 %>
 	<%= i.submit "Add" %>
 <% end %>
