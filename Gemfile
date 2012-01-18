@@ -33,4 +33,5 @@ group :test do
   gem 'turn', :require => false
   gem "capybara"
   gem 'factory_girl_rails', "~> 1.4.0"
+  gem 'spork', '~> 0.9.0.rc'
 end
