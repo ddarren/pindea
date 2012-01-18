@@ -1,3 +1,6 @@
 <%= form_tag ideas_path do %>
-test
+	<%= label_tag :name %>
+	<%= text_field_tag :name %>
+	<%= label_tag :description %>
+	<%= text_area_tag :description %>
 <% end %>

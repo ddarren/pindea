@@ -151,7 +151,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   coffee-rails (~> 3.1.0)
-  factory_girl_rails (~> 1.4)
+  factory_girl_rails (~> 1.4.0)
   jquery-rails
   pg
   rails (= 3.1.0)

@@ -32,5 +32,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
   gem "capybara"
-  gem 'factory_girl_rails', "~> 1.4"
+  gem 'factory_girl_rails', "~> 1.4.0"
 end
