@@ -6,4 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+// load namespaces.js before other js files since the namespaces will be used by other javascript files
+//= require namespaces.js 
 //= require_tree .

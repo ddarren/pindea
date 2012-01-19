@@ -1,0 +1,1 @@
+window.fantadea = window.fantadea || {};

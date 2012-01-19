@@ -1,4 +1,6 @@
-Idea = function()
+
+
+fantadea.Idea = function()
 {
 	var that = this;
 	
@@ -13,9 +15,8 @@ Idea = function()
 
 
 (function() {
-	var idea = new Idea();
-	$(document).ready(idea.init);
-		
+	var idea = new fantadea.Idea();
+	$(document).ready(idea.init);		
 })();
 
 
