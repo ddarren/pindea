@@ -9,11 +9,13 @@ fantadea.test.idea.IdeaTest = TestCase("IdeaTest");
 	
 	ValidationMock = function()
 	{
+		var that = this;
+		
 		this.validate = function(selector, expression, message)
 		{
-			this.selector = selector;
-			this.expression = expression;
-			this.message = message;
+			that.selector = selector;
+			that.expression = expression;
+			that.message = message;
 		};
 	};
 
@@ -26,12 +28,10 @@ fantadea.test.idea.IdeaTest = TestCase("IdeaTest");
 		
 	};
 	
-	fantadea.test.idea.IdeaTest.prototype.testInitalizingValidation = function() {
-			
+	fantadea.test.idea.IdeaTest.prototype.testInitalizingValidation = function() {			
 		
 		this.idea.initialize();
 		assertEquals("#idea_name", this.validationMock.selector)
-
 
 	};
 })();
