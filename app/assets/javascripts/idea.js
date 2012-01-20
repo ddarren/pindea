@@ -2,8 +2,6 @@
 
 fantadea.Idea = function(validation)
 {
-	var that = this;
-
 	this.initialize = function()
 	{
 		validation.validate("#idea_name", "if(VAL != '') return true; else return false;", "Your idea needs a name.");

@@ -6,6 +6,7 @@ fantadea.test.idea.IdeaTest = TestCase("IdeaTest");
 
 (function(){
 	
+	var that = this;
 	
 	ValidationMock = function()
 	{
@@ -23,15 +24,15 @@ fantadea.test.idea.IdeaTest = TestCase("IdeaTest");
 	fantadea.test.idea.IdeaTest.prototype.setUp = function()
 	{
 
-		this.validationMock = new ValidationMock();
-		this.idea = new fantadea.Idea(this.validationMock);
+		that.validationMock = new ValidationMock();
+		that.idea = new fantadea.Idea(that.validationMock);
 		
 	};
 	
 	fantadea.test.idea.IdeaTest.prototype.testInitalizingValidation = function() {			
 		
-		this.idea.initialize();
-		assertEquals("#idea_name", this.validationMock.selector)
+		that.idea.initialize();
+		assertEquals("#idea_name", that.validationMock.selector)
 
 	};
 })();
