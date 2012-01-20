@@ -6,10 +6,7 @@ fantadea.Idea = function()
 	
 	this.init = function()
 	{
-		$("#idea_name").validate({
-						expression: "if(VAL != '') return true; else return false;",
-						message: "Your idea needs a name."
-						});
+		fantadea.validation.validate("#idea_name", "if(VAL != '') return true; else return false;", "Your idea needs a name.");
 	}
 };
 

@@ -8,7 +8,7 @@ fantadea.test.idea.IdeaTest = TestCase("IdeaTest");
 	};
 	
 	fantadea.test.idea.IdeaTest.prototype.testInitalizingValidation = function() {
-		console.log('testfasfasfd');
+		
 		this.idea.init();
 
 
