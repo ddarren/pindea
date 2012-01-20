@@ -1,0 +1,1 @@
+fantadea.test || ( fantadea.test = {} );
