@@ -1,6 +1,7 @@
 /**
  * @author GeekTantra
  * @date 20 September 2009
+ * http://www.geektantra.com/2009/09/jquery-live-form-validation/
  * Modified by dsmith: added support for twitter boostrap
  */
 (function(jQuery){
@@ -53,8 +54,14 @@
             }
         }
         jQuery(this).parents("form").submit(function(){
-            if (validate_field('#' + SelfID)) 
+
+            if (validate_field('#' + SelfID)) {
+				
+				jQuery('.' + options['error_message_class']).remove();
+				jQuery('.' + options['error_container_class']).removeClass('error');
+			
                 return true;
+			}
             else 
                 return false;
         });
