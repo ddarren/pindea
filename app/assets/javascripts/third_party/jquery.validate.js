@@ -1,6 +1,7 @@
 /**
  * @author GeekTantra
  * @date 20 September 2009
+ * Modified by dsmith: added support for twitter boostrap
  */
 (function(jQuery){
     var ValidationErrors = new Array();
@@ -8,8 +9,8 @@
         options = jQuery.extend({
             expression: "return true;",
             message: "",
-            error_class: "ValidationErrors",
-            error_field_class: "ErrorField",
+            error_message_class: "help-inline",
+            error_container_class: "validation-container",
             live: true
         }, options);
         var SelfID = jQuery(this).attr("id");
@@ -35,8 +36,8 @@
                     }
                 });
                 jQuery(this).find('input').bind('focus keypress click', function(){
-                    jQuery("#" + SelfID).next('.' + options['error_class']).remove();
-                    jQuery("#" + SelfID).removeClass(options['error_field_class']);
+                    jQuery("#" + SelfID).next('.' + options['error_message_class']).remove();
+                    jQuery("#" + SelfID).parents("." + options['error_container_class']).removeClass('error');
                 });
             }
             else {
@@ -44,10 +45,10 @@
                     validate_field(this);
                 });
                 jQuery(this).bind('focus keypress', function(){
-                    jQuery(this).next('.' + options['error_class']).fadeOut("fast", function(){
+                    jQuery(this).next('.' + options['error_message_class']).fadeOut("fast", function(){
                         jQuery(this).remove();
                     });
-                    jQuery(this).removeClass(options['error_field_class']);
+    				jQuery(this).parents("." + options['error_container_class']).removeClass('error');
                 });
             }
         }
@@ -62,9 +63,9 @@
             var expression = 'function Validate(){' + options['expression'].replace(/VAL/g, 'jQuery(\'#' + self + '\').val()') + '} Validate()';
             var validation_state = eval(expression);
             if (!validation_state) {
-                if (jQuery(id).next('.' + options['error_class']).length == 0) {
-                    jQuery(id).after('<span class="' + options['error_class'] + '">' + options['message'] + '</span>');
-                    jQuery(id).addClass(options['error_field_class']);
+                if (jQuery(id).next('.' + options['error_message_class']).length == 0) {
+                    jQuery(id).after('<span class="' + options['error_message_class'] + '">' + options['message'] + '</span>');
+					jQuery(id).parents("div .clearfix").addClass("error")
                 }
                 if (ValidationErrors[FormID].join("|").search(id) == -1) 
                     ValidationErrors[FormID].push(id);
