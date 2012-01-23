@@ -9,8 +9,7 @@ class IdeasController < ApplicationController
     if @idea.save
       flash[:notice] = "Idea added."
     end
-    
-    render action: "show", id: @idea.id
+    redirect_to(@idea)
   end
   
 end
