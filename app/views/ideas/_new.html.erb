@@ -1,4 +1,4 @@
-<%= form_for Idea.new, :remote => true, :html => {  :class => "form-stacked" } do |i| %>
+<%= form_for Idea.new, :html => {  :class => "form-stacked" } do |i| %>
 	<div class="clearfix validation-container">
 		<%= i.label :name, "Give your idea a name" %>
 		<%= i.text_field :name %>
