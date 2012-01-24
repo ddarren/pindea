@@ -1,0 +1,7 @@
+<%= form_for GoodPoint.new, :remote => true do |g| %>
+	<div class="validation-container clearfix">
+		<%= g.text_field :text %>
+		<%= g.submit "Add", :class => "btn primary"%>
+		<%= hidden_field_tag 'idea_id', idea_id %>
+	</div>
+<% end %>

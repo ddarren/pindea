@@ -9,6 +9,7 @@
 	<div class="clear"></div>
 	<div class="grid_4">
 		<h2>Good</h2>
+		<%= render :partial =>  new_good_point_path, :locals => { :idea_id => @idea.id } %>
 	</div>
 	<div class="grid_4">
 		<h2>Bad</h2>

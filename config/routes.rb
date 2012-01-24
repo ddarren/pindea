@@ -1,6 +1,7 @@
 Fantadea::Application.routes.draw do
   
   resources :ideas
+  resources :good_points
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
