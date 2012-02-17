@@ -1,7 +1,12 @@
 Fantadea::Application.routes.draw do
   
-  resources :ideas
+  resources :ideas do
+    post :create_good_point
+  end
+  
   resources :good_points
+  match 'ideas/create_good_point' => 'ideas#create_good_point'
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
