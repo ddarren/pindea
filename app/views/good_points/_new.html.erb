@@ -2,6 +2,6 @@
 	<div class="validation-container clearfix">
 		<%= g.text_field :text %>
 		<%= g.submit "Add", :class => "btn primary"%>
-
+		<%= hidden_field_tag 'id', @idea.id  %>
 	</div>
 <% end %>

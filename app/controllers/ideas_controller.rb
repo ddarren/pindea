@@ -15,10 +15,11 @@ class IdeasController < ApplicationController
   
   def create_good_point
     @good_point = GoodPoint.new(params[:good_point])
-    @good_point.idea = Idea.find(params[:id])  
+    @idea = Idea.find(params[:id])  
+    @good_point.idea = @idea
     @good_point.save
     flash[:notice] = "Good point added " +  @good_point.id.to_s
-    render :new
+    render :show
   end
 
   
