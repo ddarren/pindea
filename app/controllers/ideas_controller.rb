@@ -19,19 +19,20 @@ class IdeasController < ApplicationController
     @point_name = params[:point_name] 
     
     point_class = Kernel.const_get(@point_name.camelize + 'Point')
-    @point = point_class.new(params[(@point_name + '_point').to_sym])
+    @point = point_class.new(params[(@point_name + '_point').to_sym]) 
        
-    save_point @point
+    assign_idea_to_point @point
+    @point.save
   end
   
 
   private
-    
-  def save_point point
+  
+  def assign_idea_to_point point
     @idea = Idea.find(params[:id])  
     point.idea = @idea
-    point.save
-  end
+  end  
+
 
   
 end
