@@ -1,10 +1,13 @@
 <%= form_for @good_point, :remote => true, :url => { :action => "create_good_point"} do |g| %>
 	<div class="validation-container clearfix">
-		<%= g.text_field :text %>
+		<%= g.text_field :text, :id => "good-point-textbox" %>
 		<%= g.submit "Add", :class => "btn primary"%>
 		<%= hidden_field_tag 'id', @idea.id  %>
 	</div>
 <% end %>
 
 <div id="good_points">
+	<% @idea.good_points.each do |good_point|  %>
+		<div class="good-container"><%= good_point.text %></div>
+	<% end %>
 </div>
