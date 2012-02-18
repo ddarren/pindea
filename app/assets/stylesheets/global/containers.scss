@@ -1,4 +1,4 @@
-.good-container, .bad-container, .neutral-container, .idea-container, .about-container
+.good-container, .bad-container, .consideration-container, .idea-container, .about-container
 {
 	border-radius: 15px;
 	border: 2px solid black;
@@ -8,9 +8,18 @@
 }
 
 .good-container {
-	background-color: #BCE3BF;
 	background: rgb(188, 227, 191);
 	background: rgba(188, 227, 191, 0.7);
+}
+
+.bad-container {
+	background: rgb(233, 192, 191);
+	background: rgba(233, 192, 191, 0.7);
+}
+
+.consideration-container {
+	background: rgb(237, 237, 237);
+	background: rgba(237, 237, 237, 0.7);
 }
 
 .idea-container {

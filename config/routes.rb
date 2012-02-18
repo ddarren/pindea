@@ -5,7 +5,9 @@ Fantadea::Application.routes.draw do
   end
   
 
-  match 'ideas/create_good_point' => 'ideas#create_good_point'
+  match 'ideas/create_point' => 'ideas#create_point'
+  match 'ideas/create_bad_point' => 'ideas#create_bad_point'
+  match 'ideas/create_consideration_point' => 'ideas#create_consideration_point'
 
   
   # The priority is based upon order of creation:
