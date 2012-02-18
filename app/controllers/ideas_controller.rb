@@ -18,8 +18,7 @@ class IdeasController < ApplicationController
     @idea = Idea.find(params[:id])  
     @good_point.idea = @idea
     @good_point.save
-    flash[:notice] = "Good point added " +  @good_point.id.to_s
-    render :show
+
   end
 
   

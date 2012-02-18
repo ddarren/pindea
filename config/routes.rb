@@ -4,7 +4,7 @@ Fantadea::Application.routes.draw do
     post :create_good_point
   end
   
-  resources :good_points
+
   match 'ideas/create_good_point' => 'ideas#create_good_point'
 
   
