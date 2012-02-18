@@ -1,4 +1,4 @@
-.good-container, .bad-container, .neutral-container, .idea-container
+.good-container, .bad-container, .neutral-container, .idea-container, .about-container
 {
 	border-radius: 15px;
 	border: 2px solid black;
@@ -15,4 +15,9 @@
 	background-color: #FCFCD5;
 }
 
+.about-container
+{
+	background-image: url(/assets/green-background.png);
+	background-position: center;
+}
 

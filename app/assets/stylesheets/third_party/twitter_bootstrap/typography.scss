@@ -70,44 +70,6 @@ h6 {
 // COLORS
 // ------
 
-// Unordered and Ordered lists
-ul, ol {
-  margin: 0 0 $baseline 25px;
-}
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-}
-ul {
-  list-style: disc;
-}
-ol {
-  list-style: decimal;
-}
-li {
-  line-height: $baseline;
-  color: $gray;
-}
-ul.unstyled {
-  list-style: none;
-  margin-left: 0;
-}
-
-// Description Lists
-dl {
-  margin-bottom: $baseline;
-  dt, dd {
-    line-height: $baseline;
-  }
-  dt {
-    font-weight: bold;
-  }
-  dd {
-    margin-left: $baseline / 2;
-  }
-}
 
 // MISC
 // ----
