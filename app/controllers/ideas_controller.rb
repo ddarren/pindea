@@ -17,22 +17,16 @@ class IdeasController < ApplicationController
   
   def create_point
     @point_name = params[:point_name] 
-    if @point_name == 'good'
-      @point = GoodPoint.new(params[:good_point])
-    end
-    if @point_name == 'bad'
-      @point = BadPoint.new(params[:bad_point])
-    end   
-    if @point_name == 'consideration'
-      @point = ConsiderationPoint.new(params[:consideration_point])
-    end
+    
+    point_class = Kernel.const_get(@point_name.camelize + 'Point')
+    @point = point_class.new(params[(@point_name + '_point').to_sym])
        
     save_point @point
   end
   
 
   private
-  
+    
   def save_point point
     @idea = Idea.find(params[:id])  
     point.idea = @idea
