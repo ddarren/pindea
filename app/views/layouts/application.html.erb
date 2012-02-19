@@ -6,7 +6,7 @@
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
 	  <script type="text/javascript">
-		$(document).ready( function() { fantadea.initializeController("<%=controller.controller_name.camelize%>"); }); 
+		$(document).ready( function() { fantadea.initializeController("<%=controller.controller_name.camelize.chomp('s')%>"); }); 
 	  </script>
 	<!-- The following is to get the sticky footer to work in IE 8 and greater -->
 	<!--[if !IE 7]>

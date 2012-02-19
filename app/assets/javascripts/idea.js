@@ -20,10 +20,9 @@ fantadea.Idea = function(validation)
 	return that;
 };
 
-
-(function() {
+fantadea.initializeIdea = function()
+{
 	var idea = new fantadea.Idea(fantadea.validation);
-	$(document).ready(idea.initialize);		
-})();
-
+	idea.initialize();
+};
 
