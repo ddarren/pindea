@@ -2,11 +2,22 @@
 
 fantadea.Idea = function(validation)
 {
-	this.initialize = function()
+	var that = {};
+	function initialize()
 	{
-		validation.validate("#idea_name", "if(VAL != '') return true; else return false;", "Your idea needs a name.", false);
-		validation.validate("#idea_description", "if(VAL != '') return true; else return false;", "Your idea needs a description.", false);
+		requireTextInPointTextboxes();
 	};
+	
+	function requireTextInPointTextboxes()
+	{
+		$('form[id$=point]').submit(function() {
+		  if($(this).find('input[type=text]').val() == '')
+		  	return false;
+		});	
+	}
+	
+	that.initialize = initialize;
+	return that;
 };
 
 
