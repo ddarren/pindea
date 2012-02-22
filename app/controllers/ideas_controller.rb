@@ -26,6 +26,7 @@ class IdeasController < ApplicationController
   end
   
 
+
   private
   
   def assign_idea_to_point point
