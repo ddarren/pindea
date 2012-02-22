@@ -75,6 +75,8 @@ GEM
     multi_json (1.1.0)
     nokogiri (1.5.0)
     pg (0.13.1)
+    pjax-rails (0.1.4)
+      jquery-rails
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.1)
@@ -157,6 +159,7 @@ DEPENDENCIES
   factory_girl_rails (~> 1.4.0)
   jquery-rails
   pg
+  pjax-rails
   rails (= 3.2.0)
   rspec-rails
   sass-rails (~> 3.2.3)
