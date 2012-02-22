@@ -1,5 +1,7 @@
-<% @ideas.each do |idea| %>
-	<a href="/ideas/<%=idea.id%>">
-		<div class="idea-container"><%= idea.name %></div>
-	</a>
-<% end %>
+<div class="clickable-container">
+	<% @ideas.each do |idea| %>
+		<a href="/ideas/<%=idea.id%>">
+			<div class="idea-container"><%= idea.name %></div>
+		</a>
+	<% end %>
+</div>

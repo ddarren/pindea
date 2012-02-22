@@ -4,7 +4,6 @@
 	border: 2px solid black;
 	padding: 5px 10px 5px 10px;
 	margin-bottom: 10px;
-
 }
 
 .good-container {
@@ -13,8 +12,9 @@
 }
 
 .bad-container {
-	background: rgb(233, 192, 191);
-	background: rgba(233, 192, 191, 0.7);
+	
+	background: rgb(255, 213, 194);
+	background: rgba(255, 213, 194, 0.7);
 }
 
 .consideration-container {
@@ -33,8 +33,14 @@
 	background-position: center;
 }
 
-a .idea-container
+.clickable-container a 
 {
 	text-decoration: none;
+	color: inherit;
+}
+
+.clickable-container .idea-container:hover
+{
+	box-shadow:0 0 12px #FB6F10; 
 }
 
