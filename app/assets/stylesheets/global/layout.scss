@@ -22,13 +22,31 @@ body
 	background: rgb(252, 252, 213);
 	background: rgba(252, 252, 213, 0.8);
 	background: rgb(56, 56, 56);
-
-	box-shadow:0 0 10px #4B4749; 
-	
+	box-shadow:0 0 10px #4B4749; 	
 	margin-bottom: 20px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 
+#header form
+{
+	margin-bottom: 0;
+}
 
+#header label
+{
+	color: white;
+}
+
+#search-area
+{
+	text-align: right;
+}
+
+#search-area input[type=text]
+{
+	width: 290px;
+}
 
 #footer {
 	position: relative;
