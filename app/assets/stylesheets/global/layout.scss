@@ -17,13 +17,25 @@ body
 
 }  
 
+#header
+{
+	background: rgb(252, 252, 213);
+	background: rgba(252, 252, 213, 0.8);
+	background: rgb(56, 56, 56);
+
+	box-shadow:0 0 10px #4B4749; 
+	
+	margin-bottom: 20px;
+}
+
+
+
 #footer {
 	position: relative;
 	margin-top: -$footer-height; /* negative value of footer height */
 	height: $footer-height;
 	clear:both;
 	font-size: .9em;
-	background-color: #F6F6F6;
 	text-align: center;
 	position: relative;
 	line-height: $footer-height;

@@ -19,12 +19,20 @@
 	<body>
 		<div id="layout-body-wrapper">
 			<div id="body">
-
-					<h1 class="site-header"> 
-						F a n t a d e a
-					</h1>
-
-				<%= yield %>
+				<div id="header">
+					<div class="container_12 ">
+						<div class="grid_4">  
+							<h1>
+								<a href="/">F a n t a d e a</a>
+							</h1>
+						</div>
+					</div>
+				</div>
+				
+				<div class="container_12">
+						<%= yield %>
+				</div>
+				</div>
 			</div>
 		</div>
 		<div id="footer">Copyright Fantadea.com</div>		

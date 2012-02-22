@@ -1,14 +1,15 @@
-h1
+h1 
 {
-	text-align: center;
-	margin-top: 0;
-	margin-left: auto;
-	margin-right: auto;
+	font-size: 22px !important;
+	font-weight: bold !important;
+	margin: 0 0 0 0 !important;
+	line-height: auto !important;
+}
 
-	border: 0px solid #A9AB2B;
-	padding: 5px 10px 5px 10px;
-	margin-bottom: 10px;
-
+h1 a
+{
+	text-decoration: none;
+	color: white;
 }
 
 h2
