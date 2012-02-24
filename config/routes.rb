@@ -1,14 +1,8 @@
 Fantadea::Application.routes.draw do
   
-  resources :ideas do
+  resources :ideas   
 
-  end
-  
-
-  match 'ideas/create_point' => 'ideas#create_point'
-  match 'ideas/create_bad_point' => 'ideas#create_bad_point'
-  match 'ideas/create_consideration_point' => 'ideas#create_consideration_point'
-  match 'ideas/search' => 'ideas#search', :via => :get
+  match 'ideas/create_point' => 'ideas#create_point', :as => :create_point
 
   
   # The priority is based upon order of creation:
