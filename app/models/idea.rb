@@ -5,4 +5,12 @@ class Idea < ActiveRecord::Base
   
   validates_presence_of :name
   validates_presence_of :description
+  
+  def self.search(search)
+    if search
+      where('name LIKE ?  OR description LIKE ?', "%#{search}%", "%#{search}%")
+    else
+      scoped
+    end
+  end
 end

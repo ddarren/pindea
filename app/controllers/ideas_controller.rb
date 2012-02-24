@@ -1,5 +1,8 @@
 class IdeasController < ApplicationController
-
+  def index
+    @ideas = Idea.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
+  end
+  
   def show
     @idea = Idea.find(params[:id])
     @good_point = GoodPoint.new
