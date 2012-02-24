@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.0'
+gem 'thin'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -35,5 +36,4 @@ group :test do
   gem "capybara"
   gem 'factory_girl_rails', "~> 1.4.0"
   gem 'spork', '~> 0.9.0.rc'
-  gem 'thin'
 end
