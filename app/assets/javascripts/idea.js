@@ -7,7 +7,7 @@ fantadea.Idea = function(validation)
 	{
 		requireTextInPointTextboxes();
 		enableAjaxPaging();
-		new fantadea.Facebook().enableSDK();
+		new fantadea.Facebook().parseXFBML();
 
 	};
 	
