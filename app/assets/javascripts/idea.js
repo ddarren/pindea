@@ -5,6 +5,7 @@ fantadea.Idea = function(validation)
 	var that = {};
 	function initialize()
 	{
+		new fantadea.Facebook().enableSDK();
 		requireTextInPointTextboxes();
 	};
 	
@@ -15,7 +16,7 @@ fantadea.Idea = function(validation)
 		  	return false;
 		});	
 	}
-	
+		
 	that.initialize = initialize;
 	return that;
 };
