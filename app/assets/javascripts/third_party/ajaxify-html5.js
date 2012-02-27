@@ -1,4 +1,5 @@
 // https://gist.github.com/854622
+// https://github.com/balupton/History.js
 (function(window,undefined){
 	
 	// Prepare our Variables

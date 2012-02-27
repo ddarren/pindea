@@ -3,9 +3,7 @@
 
 	</head>		
 	<body>
-		 <script type="text/javascript" class=".document-script">
-			$(document).ready( function() { fantadea.initializeController("<%=controller.controller_name.camelize.chomp('s')%>"); }); 
-		 </script>
+		<%= render :partial => "layouts/document-ready" %>
 		<%= yield %>
 	</body>
 </html>
