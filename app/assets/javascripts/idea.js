@@ -5,8 +5,10 @@ fantadea.Idea = function(validation)
 	var that = {};
 	function initialize()
 	{
-		new fantadea.Facebook().enableSDK();
 		requireTextInPointTextboxes();
+		enableAjaxPaging();
+		new fantadea.Facebook().enableSDK();
+
 	};
 	
 	function requireTextInPointTextboxes()
@@ -15,6 +17,14 @@ fantadea.Idea = function(validation)
 		  if($(this).find('input[type=text]').val() == '')
 		  	return false;
 		});	
+	}
+	
+	function enableAjaxPaging()
+	{
+	  $("#ideas th a, #ideas .pagination a").live("click", function() {
+	    $.getScript(this.href);
+	    return false;
+	  });
 	}
 		
 	that.initialize = initialize;

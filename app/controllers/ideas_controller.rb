@@ -8,6 +8,12 @@ class IdeasController < ApplicationController
     @good_point = GoodPoint.new
     @bad_point = BadPoint.new
     @consideration_point = ConsiderationPoint.new
+    
+    if request.xhr?
+      respond_to do |format|
+          format.html { render :layout => 'empty' }
+      end
+    end
   end
   
   def create
