@@ -1,6 +1,7 @@
 Fantadea::Application.routes.draw do
   
   resources :ideas   
+  resources :site_suggestions
 
   match 'ideas/create_point' => 'ideas#create_point', :as => :create_point
 

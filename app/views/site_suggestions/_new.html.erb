@@ -1,0 +1,7 @@
+<%= form_for SiteSuggestion.new, :html => { :class => "form-stacked"}, :remote => true do |s| %>
+	<div class="clearfix validation-container">		
+		<%= s.label :text, "Comments/suggestions" %>
+		<%= s.text_field :text	%>
+	</div>
+
+<% end%>
