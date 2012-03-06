@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#">
 	<head>
-	  <title>Fantadea</title>
+	  <title><%= Settings.product_name %></title>
 	  <%= stylesheet_link_tag    "application" %>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
@@ -45,7 +45,7 @@
 					<div class="container_12">
 						<div class="grid_4">  
 							<h1>
-								<a href="/">P i n d e a</a>
+								<a href="/"><%= Settings.product_name.gsub(/(.{1})/, '\1 ') %></a>
 							</h1> 
 						</div>
 						<div class="grid_8">
@@ -61,6 +61,6 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer">Copyright Pindea.com</div>		
+		<div id="footer">Copyright <%= Settings.product_name %>.com</div>		
 	</body>
 </html>
