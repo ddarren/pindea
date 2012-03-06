@@ -28,6 +28,18 @@ body
 	padding-bottom: 4px;
 }
 
+#header a
+{
+	padding: 5px 5px 5px 5px;
+	border-radius: 15px;
+}
+
+#header a:hover
+{
+	background-color: #414141;
+	box-shadow:0 0 12px #5D585A; 
+}
+
 #header form
 {
 	margin-bottom: 0;
