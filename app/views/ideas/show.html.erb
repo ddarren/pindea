@@ -22,13 +22,22 @@
 <div class="clear"></div>
 <div class="grid_4">
 	<h2>Good because...</h2>
-	 <%= render :partial =>  'points', :locals => { :point_name => "good" } %>
 </div>
 <div class="grid_4">
 	<h2>Bad because...</h2>
-	<%= render :partial =>  'points', :locals => { :point_name => "bad" } %>
 </div>		
 <div class="grid_4">
 	<h2>Consider...</h2>
+</div>
+
+<div class="clear"></div>
+
+<div id="good-idea-column" class="grid_4">
+	 <%= render :partial =>  'points', :locals => { :point_name => "good" } %>
+</div>
+<div id="bad-idea-column" class="grid_4">
+	<%= render :partial =>  'points', :locals => { :point_name => "bad" } %>
+</div>		
+<div class="grid_4">
 	 <%= render :partial =>  'points', :locals => { :point_name => "consideration" } %>		
 </div>

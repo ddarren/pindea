@@ -8,5 +8,12 @@
 
 #good-point-textbox, #bad-point-textbox, #consideration-point-textbox
 {
-	width: 95%;
+	width: 85%;
+}
+
+#new_good_point input[type=submit], #new_bad_point input[type=submit], #new_consideration_point input[type=submit]
+{
+	width: 30px;
+	padding-left: 0px;
+	padding-right: 0px;
 }

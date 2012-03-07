@@ -6,6 +6,7 @@ fantadea.Idea = function(validation)
 	function initialize()
 	{
 		$(".alert").alert();
+
 		requireTextInPointTextboxes();
 		enableAjaxPaging();
 		new fantadea.Facebook().parseXFBML();
