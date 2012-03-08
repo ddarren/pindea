@@ -1,12 +1,12 @@
 <%= form_for Idea.new, :html => {  :class => "form-stacked" } do |i| %>
 	<div class="clearfix validation-container">
-		<%= i.label :name, "Label your idea" %>
-		<%= i.text_field :name %>
+		<%= i.label :name, "Give your idea a name"%>
+		<%= i.text_field :name, :placeholder => "Just a short name for you idea." %>
 	
 	</div>
 	<div class="clearfix validation-container">
 		<%= i.label :description, "Describe your idea" %>
-		<%= i.text_area :description, :rows => 10 %>
+		<%= i.text_area :description, :rows => 10, :placeholder => "Put all the details for your idea here." %>
 	</div>
 
 	<%= i.submit "Add", :class => "btn btn-primary" %>
