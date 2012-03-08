@@ -2,6 +2,8 @@
 // ------------
 @import "variables.scss";
 @import "mixins.scss";
+// ALERT STYLES
+// ------------
 
 // Base alert styles
 .alert {
@@ -10,7 +12,7 @@
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
   background-color: $warningBackground;
   border: 1px solid $warningBorder;
-    @include border-radius(4px);
+  @include border-radius(4px);
 }
 .alert,
 .alert-heading {

@@ -2,6 +2,9 @@
 // -----------
 @import "variables.scss";
 @import "mixins.scss";
+// CLOSE ICONS
+// -----------
+
 .close {
   float: right;
   font-size: 20px;
@@ -13,7 +16,7 @@
   &:hover {
     color: $black;
     text-decoration: none;
-     @include opacity(40);
+    @include opacity(40);
     cursor: pointer;
   }
 }
