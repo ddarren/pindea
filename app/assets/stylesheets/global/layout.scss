@@ -53,11 +53,18 @@ body
 #search-area
 {
 	text-align: right;
+	vertical-align: middle;
+	padding-top: 2px;
+}
+
+#search-area form div
+{
+	vertical-align: middle;
 }
 
 #search-area input[type=text]
 {
-	width: 290px;
+	width: 252px;
 }
 
 #footer {

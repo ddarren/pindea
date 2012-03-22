@@ -1,6 +1,7 @@
-/* variables.scss 1.4.0 from https://github.com/jlong/sass-twitter-bootstrap
- * Variables and mixins to pre-ignite any new web development project
- * ------------------------------------------------------------------ */
+// Variables.scss
+// Variables to customize the look and feel of Bootstrap
+// -----------------------------------------------------
+
 
 
 // GLOBAL VALUES
@@ -13,7 +14,7 @@ $linkColorHover:        darken($linkColor, 15) !default;
 // Grays
 $black:                 #000 !default;
 $grayDarker:            #222 !default;
-$grayDark:              lighten($black, 25%) !default;
+$grayDark:              #333 !default;
 $gray:                  #555 !default;
 $grayLight:             #999 !default;
 $grayLighter:           #eee !default;
@@ -54,8 +55,8 @@ $zindexModalBackdrop:   1040 !default;
 $zindexModal:           1050 !default;
 
 // Sprite icons path
-$iconSpritePath:          "/assets/glyphicons-halflings.png";
-$iconWhiteSpritePath:     "/assets/glyphicons-halflings-white.png";
+$iconSpritePath:          "../img/glyphicons-halflings.png";
+$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
 
 // Input placeholder text color
 $placeholderText:       $grayLight !default;
