@@ -1,7 +1,8 @@
 .good-container, .bad-container, .consideration-container, .idea-container, .about-container
 {
 	border-radius: 15px;
-	border: 2px solid black;
+	box-shadow:0 0 4px #000; 
+	border: 2px solid transparent;
 	padding: 5px 10px 5px 10px;
 	margin-bottom: 10px;
 }
@@ -42,6 +43,7 @@
 
 .clickable-container .idea-container:hover
 {
+	border: 2px solid #979797;
 	box-shadow:0 0 12px #FB6F10; 
 }
 
