@@ -8,7 +8,14 @@ fantadea.Home = function(validation)
 	{
 		validation.validate("#idea_name", "if(VAL != '') return true; else return false;", "Your idea needs a name.", false);
 		validation.validate("#idea_description", "if(VAL != '') return true; else return false;", "Your idea needs a description.", false);
+		$("#new_site_suggestion").submit(onSiteSuggestionSubmission);
 	};
+	
+	function onSiteSuggestionSubmission()
+	{
+		$('#site_suggestion_text').val("");
+	 	$('#site_suggestion_text').attr("placeholder", "Thanks for the feedback!");
+	}
 	
 	that.initialize = initialize;
 	return that;

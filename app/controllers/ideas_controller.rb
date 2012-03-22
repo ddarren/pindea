@@ -31,6 +31,8 @@ class IdeasController < ApplicationController
        
     assign_idea_to_point @point
     @point.save
+    
+    render :nothing => true
   end
   
 
