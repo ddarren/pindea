@@ -22,3 +22,23 @@
 {
 	margin-bottom: 8px;
 }
+
+#new_idea
+{
+	padding-left: 15px;
+}
+
+#new_idea label
+{
+	display: inline;
+}
+
+#new_idea input[type=text], #new_idea textarea
+{
+	width: 240px;
+}
+
+#new_idea a
+{
+	margin-left: 20px;
+}
