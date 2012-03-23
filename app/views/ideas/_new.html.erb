@@ -1,7 +1,8 @@
 <%= form_for Idea.new, :html => {  :class => "form-stacked" } do |i| %>
 	<div class="clearfix validation-container">
 		<%= i.label :name, "Give your idea a name"%>
-		<a>See examples</a>
+		<a id="idea-examples-link" class="no-auto-ajax" data-content="test" data-original-title="Idea Examples" href="#" rel="popover" >See examples</a>
+
 		<%= i.text_field :name %>
 	
 	</div>

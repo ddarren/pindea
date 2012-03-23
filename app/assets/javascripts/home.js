@@ -9,6 +9,7 @@ fantadea.Home = function(validation)
 		validation.validate("#idea_name", "if(VAL != '') return true; else return false;", "Your idea needs a name.", false);
 		validation.validate("#idea_description", "if(VAL != '') return true; else return false;", "Your idea needs a description.", false);
 		$("#new_site_suggestion").submit(onSiteSuggestionSubmission);
+		$("#idea-examples-link").popover({ placement: 'bottom', trigger: 'hover'});
 	};
 	
 	function onSiteSuggestionSubmission()

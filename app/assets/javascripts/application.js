@@ -9,4 +9,5 @@
 // load namespaces.js before other js files since the namespaces will be used by other javascript files
 //= require namespaces.js 
 //= require third_party/jquery.history.js
+//= require third_party/twitter_bootstrap/bootstrap-tooltip.js
 //= require_tree .
