@@ -1,6 +1,6 @@
 <div class="clickable-container">
 	<% @ideas.each do |idea| %>
-		<a href="/ideas/<%=idea.id%>">
+		<a href="/ideas/<%=idea.id%>" class="auto-ajax">
 			<div class="idea-container"><%= idea.name %></div>
 		</a>
 	<% end %>

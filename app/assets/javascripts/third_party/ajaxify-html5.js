@@ -72,7 +72,7 @@
 			var $this = $(this);
 			
 			// Ajaxify
-			$this.find('a:internal:not(.no-auto-ajax):not(.no-auto-ajax *)').click(function(event){
+			$this.find('a.auto-ajax:internal').click(function(event){
 				// Prepare
 				var
 					$this = $(this),
