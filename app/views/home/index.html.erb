@@ -1,25 +1,25 @@
 	<div class="grid_4">
-		<h2>About</h2>
+		<h2 class="vertical-margins">About</h2>
 		<div class="about-container">	
-			<h4>What is this site?</h4>	
+			<h4 class="vertical-margins">What is this site?</h4>	
 			Do you have an idea and need some quick feedback? Post it on <%= Settings.product_name %> and find out what people think!
 			<ul class="no-indent-list">
 			    <li>Share ideas with friends via Facebook, Twitter, and email.</li>
 				<li>Get feedback from the entire <%= Settings.product_name %> community.</li>
 			</ul>
 			
-			<h4>Getting started</h4>
+			<h4 class="vertical-margins">Getting started</h4>
 			<p>Go ahead and add an idea by using the form to your right. Once you add an idea, it'll be posted on the website and look like <a>this</a>.</p>
 			<%= render :partial => new_site_suggestion_path %>
 		</div>
 	</div>
 	<div class="grid_4">  
-		<h2>Add an Idea</h2>
+		<h2 class="vertical-margins">Add an Idea</h2>
 		<div class="idea-container">
 			<%= render :partial => new_idea_path %>
 		</div>
 	</div>
 	<div class="grid_4"> 
-		<h2>Latest Ideas</h2>
+		<h2 class="vertical-margins">Latest Ideas</h2>
 		<%= render :partial => "ideas/latest_ideas" %>
 	</div>
