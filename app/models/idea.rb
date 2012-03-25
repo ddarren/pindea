@@ -6,6 +6,9 @@ class Idea < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :description
   
+  NAME_LENGTH = 64
+  DESCRIPTION_LENGTH = 512
+  
   def self.search(search)
     if search
       where('UPPER(name) LIKE UPPER(?)  OR UPPER(description) LIKE UPPER(?)', "%#{search}%", "%#{search}%")

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120306045832) do
+ActiveRecord::Schema.define(:version => 20120325225424) do
 
   create_table "bad_points", :force => true do |t|
     t.text     "text"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20120306045832) do
 
   create_table "ideas", :force => true do |t|
     t.string   "name"
-    t.text     "description"
+    t.string   "description", :limit => 512
     t.boolean  "is_private"
     t.datetime "created_at"
     t.datetime "updated_at"
