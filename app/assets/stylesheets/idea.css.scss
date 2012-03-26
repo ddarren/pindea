@@ -26,6 +26,7 @@
 #new_idea
 {
 	padding-left: 15px;
+	padding-right: 15px;
 }
 
 #new_idea label
@@ -35,7 +36,7 @@
 
 #new_idea input[type=text], #new_idea textarea
 {
-	width: 240px;
+	width: 100%;
 }
 
 #new_idea a

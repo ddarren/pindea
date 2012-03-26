@@ -22,26 +22,19 @@
 </div>
 
 <div class="row">
-	<div class="span4">
-		<h2 class="vertical-margins">Good because...</h2>
-	</div>
-	<div class="span4">
-		<h2 class="vertical-margins">Bad because...</h2>
-	</div>		
-	<div class="span4">
-		<h2 class="vertical-margins">Consider...</h2>
-	</div>
-
-</div>
-
-<div class="row">
 	<div id="good-idea-column" class="span4">
-		 <%= render :partial =>  'points', :locals => { :point_name => "good" } %>
+		<h2 class="vertical-margins">Good because...</h2>		
+		<%= render :partial =>  'points', :locals => { :point_name => "good" } %>		
 	</div>
 	<div id="bad-idea-column" class="span4">
+		<h2 class="vertical-margins">Bad because...</h2>
 		<%= render :partial =>  'points', :locals => { :point_name => "bad" } %>
 	</div>		
-	<div  id="consideration-idea-column" class="span4">
-		 <%= render :partial =>  'points', :locals => { :point_name => "consideration" } %>		
+	<div id="consideration-idea-column" class="span4">
+		<h2 class="vertical-margins">Consider...</h2>
+		<%= render :partial =>  'points', :locals => { :point_name => "consideration" } %>	
 	</div>
+
 </div>
+
+
