@@ -10,13 +10,20 @@ fantadea.Home = function(validation)
 		validation.validate("#idea_description", "if(VAL != '') return true; else return false;", "Your idea needs a description.", false);
 		$('textarea[maxlength]').limitMaxlength();
 		$("#new_site_suggestion").submit(onSiteSuggestionSubmission);
-		$("#idea-examples-link").popover({ placement: 'bottom', trigger: 'hover'});
+		$("#idea-examples-link").popover({ placement: 'bottom'});
+		enableHidePopupWhenPageClicked();
+		
 	};
 	
 	function onSiteSuggestionSubmission()
 	{
 		$('#site_suggestion_text').val("");
 	 	$('#site_suggestion_text').attr("placeholder", "Thanks for the feedback!");
+	}
+	
+	function enableHidePopupWhenPageClicked() // needed for phones & tablets
+	{
+		$(body).click(function() { $("#idea-examples-link").popover('hide'); });
 	}
 
 	that.initialize = initialize;
