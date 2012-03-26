@@ -23,7 +23,7 @@ fantadea.Idea = function(validation)
 		});
 		
 		$("form[id$=point]").live("ajax:beforeSend", function(){
-		  $(this).find("input[type=text]").val("");
+		  $(this).find("input[type=text]").val("").attr("placeholder", "Add another thought here...");
 		});
 	}
 	

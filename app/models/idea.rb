@@ -8,6 +8,7 @@ class Idea < ActiveRecord::Base
   
   NAME_LENGTH = 64
   DESCRIPTION_LENGTH = 512
+  POINT_LENGTH = 128
   
   def self.search(search)
     if search

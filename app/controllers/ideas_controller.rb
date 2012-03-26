@@ -18,6 +18,7 @@ class IdeasController < ApplicationController
   
   def create
     @idea = Idea.new(params[:idea])
+    @idea.description = @idea.description.gsub(/\n/, '')
     @idea.save  
     flash[:isNew] = "true"
     redirect_to @idea
