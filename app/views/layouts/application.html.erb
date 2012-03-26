@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#">
 	<head>
-	  <title><%= Settings.product_name %></title>
-	  <%= stylesheet_link_tag    "application" %>
-	  <%= javascript_include_tag "application" %>
-	  <%= csrf_meta_tags %>
+		<title><%= Settings.product_name %></title>
+		<%= stylesheet_link_tag    "application" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 
-	<%= render :partial => "layouts/document-ready" %>
-	<!-- The following is to get the sticky footer to work in IE 8 and greater -->
-	<!--[if !IE 7]>
-		<style type="text/css">
-			#layout-body-wrapper {display:table;height:100%}
-		</style>
-	<![endif]-->
+		<%= render :partial => "layouts/document-ready" %>
+		<!-- The following is to get the sticky footer to work in IE 8 and greater -->
+		<!--[if !IE 7]>
+			<style type="text/css">
+				#layout-body-wrapper {display:table;height:100%}
+			</style>
+		<![endif]-->
 	
 	</head>
 	<body>
@@ -42,21 +43,23 @@
 		<div id="layout-body-wrapper">
 			<div id="body">
 				<div id="header">
-					<div class="container_12">
-						<div class="grid_4">  
-							<h1>
-								<a href="/" class="auto-ajax"><%= Settings.product_name.gsub(/(.{1})/, '\1 ') %></a>
-							</h1> 
-						</div>
-						<div class="grid_8">
-							<div id="search-area">
-								<%= render :partial => "/ideas/search" %>
+					<div class="container">
+						<div class="row">
+							<div class="span4">  
+								<h1>
+									<a href="/" class="auto-ajax"><%= Settings.product_name.gsub(/(.{1})/, '\1 ') %></a>
+								</h1> 
+							</div>
+							<div class="span8">
+								<div id="search-area">
+									<%= render :partial => "/ideas/search" %>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				
-				<div id="content" class="container_12"	>
+				<div id="content" class="container">
 						<%= yield %>
 				</div>
 				<!-- Below needed so FB Send dialog space doesn't get cut off -->
