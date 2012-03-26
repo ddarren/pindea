@@ -12,6 +12,7 @@ class Idea < ActiveRecord::Base
   
   def self.search(search)
     if search
+      search.strip!
       where('UPPER(name) LIKE UPPER(?)  OR UPPER(description) LIKE UPPER(?)', "%#{search}%", "%#{search}%")
     else
       scoped
