@@ -1,6 +1,6 @@
 
 <%= form_for instance_variable_get("@" + point_name + "_point"), :remote => true, :url => create_point_path  do |g| %>
-	<div class="validation-container clearfix">
+	<div class="validation-container clearfix input-append">
 		<%= g.text_field :text, :id => point_name + "-point-textbox", :placeholder => "Add a thought here...", :maxlength => Idea::POINT_LENGTH %>
 		<%= hidden_field_tag 'id', @idea.id  %>
 		<%= hidden_field_tag 'point_name', point_name  %>
