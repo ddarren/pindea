@@ -9,7 +9,17 @@
 #good-point-textbox, #bad-point-textbox, #consideration-point-textbox
 {
 	width: 85%;
+	
 }
+
+// tablets
+@media (min-width: 768px) and (max-width: 979px) {
+	#good-point-textbox, #bad-point-textbox, #consideration-point-textbox
+	{
+		width: 82%;
+	}
+}
+
 
 
 #new_idea
