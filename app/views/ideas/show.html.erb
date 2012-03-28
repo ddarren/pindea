@@ -1,6 +1,8 @@
 
 <div class="row">
 	<div class="span12">
+		<h2 class="top-vertical-margin">My Idea</h2>
+		
 		<%if flash[:isNew] == "true" then %>
 			<div class="alert alert-info">
 				<a class="close" data-dismiss="alert">&times;</a>
@@ -12,6 +14,9 @@
 				</ul>
 			</div>
 		<% end %>	
+		<div id="learn-about-idea-link-container">
+			<a id="learn-about-idea-link">Click here to learn about this page.</a>
+		</div>
 		<div class="idea-container">
 			<%= @idea.name %>
 			</br>
@@ -22,16 +27,16 @@
 </div>
 
 <div class="row">
-	<div id="good-idea-column" class="span4">
-		<h2 class="vertical-margins">Good because...</h2>		
+	<div id="good-idea-column" class="span4 idea-column">
+		<h3 class="vertical-margins">Good because...</h3>		
 		<%= render :partial =>  'points', :locals => { :point_name => "good" } %>		
 	</div>
-	<div id="bad-idea-column" class="span4">
-		<h2 class="vertical-margins">Bad because...</h2>
+	<div id="bad-idea-column" class="span4 idea-column">
+		<h3 class="vertical-margins">Bad because...</h3>
 		<%= render :partial =>  'points', :locals => { :point_name => "bad" } %>
 	</div>		
-	<div id="consideration-idea-column" class="span4">
-		<h2 class="vertical-margins">Consider...</h2>
+	<div id="consideration-idea-column" class="span4 idea-column">
+		<h3 class="vertical-margins">Consider...</h3>
 		<%= render :partial =>  'points', :locals => { :point_name => "consideration" } %>	
 	</div>
 

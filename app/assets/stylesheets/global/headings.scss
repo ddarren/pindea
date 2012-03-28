@@ -17,6 +17,17 @@ h2
 	text-align: center;
 }
 
+h2.vertical-margins, h3.vertical-margins, h4.vertical-margins
+{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+h2.top-vertical-margin, h3.top-vertical-margin, h4.top-vertical-margin
+{
+	margin-top: 10px;
+}
+
 
 
 
