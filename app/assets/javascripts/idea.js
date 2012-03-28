@@ -7,7 +7,7 @@ fantadea.Idea = function(validation)
 	{
 		$(".alert").alert();
 
-		requireTextInPointTextboxes();
+		
 		enablePointAppending();
 		enableAjaxPaging();
 		new fantadea.Facebook().parseXFBML();
@@ -17,6 +17,10 @@ fantadea.Idea = function(validation)
 	function enablePointAppending()
 	{
 		$('form[id$=point]').submit(function() {
+			var inputtedValue = $(this).find('input[type=text]').val();
+			if($.trim(inputtedValue) == '')
+		  		return false;
+		
 			var pointName = $(this).next("div[id*='points']:first").attr("id").split('_')[0];		
 			var pointText = $(this).find("input[type=text]").val();		
 			$(this).next("div[id='" + pointName +"_points']").prepend("<div class='" + pointName + "-container'>" + pointText + "</div>");				
@@ -27,13 +31,6 @@ fantadea.Idea = function(validation)
 		});
 	}
 	
-	function requireTextInPointTextboxes()
-	{
-		$('form[id$=point]').submit(function() {
-		  if($(this).find('input[type=text]').val() == '')
-		  	return false;
-		});	
-	}
 	
 	function enableAjaxPaging()
 	{
