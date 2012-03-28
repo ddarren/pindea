@@ -15,7 +15,7 @@
 			</div>
 		<% end %>	
 		<div id="learn-about-idea-link-container">
-			<a id="learn-about-idea-link">Click here to learn about this page.</a>
+			<a id="learn-about-idea-link" data-toggle="modal" href="#idea-help-modal">Click here to learn about this page.</a>
 		</div>
 		<div class="idea-container">
 			<%= @idea.name %>
@@ -42,4 +42,15 @@
 
 </div>
 
-
+<div id="idea-help-modal" class="modal hide fade in" >
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+  </div>
+</div>
