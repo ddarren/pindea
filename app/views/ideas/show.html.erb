@@ -1,9 +1,6 @@
-
-<div class="row">
-	<div class="span12">
-		<h2 id="idea-page-heading" class="top-vertical-margin">My Idea</h2>
-		
-		<%if flash[:isNew] == "true" then %>
+<%if flash[:isNew] == "true" then %>
+	<div class="row">
+		<div class="span12">
 			<div class="alert alert-info">
 				<a class="close" data-dismiss="alert">&times;</a>
 				You have just created an idea on Pindea! To get feedback, you can do the following.
@@ -13,7 +10,16 @@
 					<li>Copy this URL in your address bar and send the URL through email or text message.
 				</ul>
 			</div>
-		<% end %>	
+		</div>
+	</div>
+<% end %>
+
+
+<div class="row">
+	<div class="span12">
+		<h2 id="idea-page-heading" class="top-vertical-margin">My Idea</h2>
+		
+	
 		<div id="learn-about-idea-link-container">
 			<a id="learn-about-idea-link" data-toggle="modal" href="#idea-help-modal">Click here to learn about this page.</a>
 		</div>
