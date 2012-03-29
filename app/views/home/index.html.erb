@@ -10,7 +10,7 @@
 			</ul>
 	
 			<h4 class="vertical-margins">Getting started</h4>
-			<p>Go ahead and add an idea by using the form to your right. Once you add an idea, it'll be posted on the website and look like <a>this</a>.</p>
+			<p>Go ahead and add an idea by using the form to your right. Once you add an idea, it'll be posted on the website and look like <a href="#idea-example-modal" data-toggle="modal" >this</a>.</p>
 			<%= render :partial => new_site_suggestion_path %>
 		</div>
 	</div>
@@ -24,4 +24,17 @@
 		<h2 class="vertical-margins">Latest Ideas</h2>
 		<%= render :partial => "ideas/latest_ideas" %>
 	</div>
+</div>
+
+<div id="idea-example-modal" class="modal hide fade in" >
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Idea Example</h3>
+  </div>
+  <div class="modal-body">
+    <img src="/assets/idea_example.jpg" alt="Image Help">
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+  </div>
 </div>

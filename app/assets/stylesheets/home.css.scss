@@ -2,3 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Default Desktops
+@media (min-width: 980px) {
+	#idea-example-modal
+	{
+		width: auto;
+		margin: -250px 0 0 -380px;
+		max-height: 560px;
+	}
+}
