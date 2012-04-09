@@ -7,7 +7,6 @@
 						expression: expression,
 						message: message,
 						error_message_class: "help-inline",
-						error_container_class: "validation-container",
 						live: isRealTime
 						});
 	};

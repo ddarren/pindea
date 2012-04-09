@@ -1,12 +1,12 @@
 <%= form_for Idea.new, :html => {  :class => "form-stacked" } do |i| %>
-	<div class="clearfix validation-container">
+	<div class="clearfix control-group">
 		<%= i.label :name, "Give your idea a name"%>
 		<a id="idea-examples-link" data-content="<strong>Name:</strong> Austin Sunday Running Group<br /><strong>Description:</strong> Create a running group that meets up at 10 AM at the Town Lake trail every Sunday.<br /></br /><strong>Name: </strong>Mobile Massages<br /><strong>Description:</strong> Massage therapist travels to businesses during the day and offers chair massages." data-original-title="Idea Examples" href="#" rel="popover" >See examples</a>
 
 		<%= i.text_field :name, :maxlength => Idea::NAME_LENGTH %>
 	
 	</div>
-	<div class="clearfix validation-container">
+	<div class="clearfix control-group">
 		<%= i.label :description, "Describe your idea" %>
 		<%= i.text_area :description, :rows => 10, :maxlength => Idea::DESCRIPTION_LENGTH %>
 	</div>

@@ -6,8 +6,8 @@ fantadea.Home = function(validation)
 	var that = {};
 	function initialize()
 	{
-		validation.validate("#idea_name", "if(VAL != '') return true; else return false;", "Your idea needs a name.", false);
-		validation.validate("#idea_description", "if(VAL != '') return true; else return false;", "Your idea needs a description.", false);
+		validation.validate("#idea_name", "if(VAL != '') return true; else return false;", "Your idea needs a name.", true);
+		validation.validate("#idea_description", "if(VAL != '') return true; else return false;", "Your idea needs a description.", true);
 		$('textarea[maxlength]').limitMaxlength();
 		$("#new_site_suggestion").submit(onSiteSuggestionSubmission);
 		$("#idea-examples-link").popover({ placement: 'bottom'});
