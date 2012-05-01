@@ -7,12 +7,12 @@
 		<%= csrf_meta_tags %>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
 		<meta property="og:site_name" content="site-test" />
-		<meta property="og:title" content="title-test" />
+		<meta property="og:title" content="#{ Settings.product_name } - Get feedback for your ideas!" />
 		<meta property="og:image" content="<%= request.scheme + '://' + request.host_with_port + '/' + request.script_name + image_path('idea_example.jpg') %>" />
 		<meta property="og:type" content="article">
 		<meta property="og:url" content="<%= request.url %>" />
 		<meta property="fb:app_id" content="160913350693857" />
-		<meta property="og:description" content="Test Description" />
+		<meta property="og:description" content="I just posted an idea on #{ Settings.product_name }. Please give me some helpful feedback." />
 		<%= render :partial => "layouts/document-ready" %>
 		<!-- The following is to get the sticky footer to work in IE 8 and greater -->
 		<!--[if !IE 7]>
