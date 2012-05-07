@@ -1,9 +1,15 @@
 Fantadea::Application.routes.draw do
   
+  resources :ideas_admin
+
   resources :ideas   
   resources :site_suggestions
 
   match 'ideas/create_point' => 'ideas#create_point', :as => :create_point
+  
+  match 'ideas_admin/edit/:id' => 'ideas_admin#edit', :as => :edit_ideas_admin
+  match 'ideas_admin/destroy/:id' => 'ideas_admin#destroy', :as => :destroy_ideas_admin
+  match 'ideas_admin/' => 'ideas#index', :as => :ideas_admin
 
   
   # The priority is based upon order of creation:
