@@ -1,7 +1,7 @@
 class Idea < ActiveRecord::Base
-  has_many :good_points, :order => 'created_at DESC'
-  has_many :bad_points, :order => 'created_at DESC'
-  has_many :consideration_points, :order => 'created_at DESC'
+  has_many :good_points, :order => 'created_at DESC', :dependent => :delete_all
+  has_many :bad_points, :order => 'created_at DESC', :dependent => :delete_all
+  has_many :consideration_points, :order => 'created_at DESC', :dependent => :delete_all
   
   validates_presence_of :name
   validates_presence_of :description
