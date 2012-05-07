@@ -1,7 +1,7 @@
 class IdeasAdminController < ApplicationController
   
   force_ssl
-  http_basic_authenticate_with :name => "homer", :password => "simpson"
+  http_basic_authenticate_with :name => Settings.basic_auth_user, :password => Settings.basic_auth_password
   
   
   # GET /ideas

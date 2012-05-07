@@ -1,16 +1,21 @@
 # config/settings.yml
 
 defaults: &defaults
-    product_name: "Pindea"
+  product_name: "Pindea"
+  basic_auth_user: "homer"
+  basic_auth_password: "simpson"
     
 development:
   <<: *defaults
 
 test:
   <<: *defaults
-
+  
 production:
+  basic_auth_user: "Eric"
+  basic_auth_password: "C@rtman"
   <<: *defaults
+
 
 # defaults: &defaults
 #   cool:
