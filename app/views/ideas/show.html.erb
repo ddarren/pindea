@@ -1,7 +1,10 @@
+<%= link_to"<-- Home", root_path %>
+
 <%if flash[:isNew] == "true" then %>
 	<div class="row">
 		<div class="span12">
-			<div class="alert alert-info">
+		   
+			<div id="idea-alert" class="alert alert-info">
 				<a class="close" data-dismiss="alert">&times;</a>
 				You have just created an idea on Pindea! To get feedback, you can do the following.
 				<ul>
@@ -18,7 +21,7 @@
 
 <div class="row">
 	<div class="span12">
-		<h2 id="idea-page-heading" class="top-vertical-margin">My Idea</h2>
+		<h2 id="idea-page-heading">My Idea</h2>
 		
 	
 		<div id="learn-about-idea-link-container">
