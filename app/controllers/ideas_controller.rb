@@ -30,10 +30,18 @@ class IdeasController < ApplicationController
     point_class = Kernel.const_get(@point_name.camelize + 'Point')
     @point = point_class.new(params[(@point_name + '_point').to_sym]) 
        
-    assign_idea_to_point @point
-    @point.save
-    
-    render :nothing => true
+    assign_idea_to_point @point 
+    if @point.save
+      # render :nothing => true
+      respond_to do |format|
+          format.json {  render json: @point, status: :created }
+      end
+    else
+      respond_to do |format|
+          format.json {  render json: @point.errors, status: :unprocessable_entity }
+      end
+    end    
+
   end
   
 
