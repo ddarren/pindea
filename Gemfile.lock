@@ -176,7 +176,7 @@ DEPENDENCIES
   pg
   pjax-rails
   rails (= 3.2.0)
-  rspec-rails
+  rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
   settingslogic
   spork

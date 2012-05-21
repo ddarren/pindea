@@ -41,6 +41,11 @@ describe "home page" do
     should_be_on_idea_page
   end
   
+  it "should show new idea help text on idea page when adding an idea" do
+    add_idea
+    page.should have_selector "#idea-alert"
+  end
+  
   def add_idea
     fill_in "idea_name", :with => "test idea"
     fill_in "idea_description", :with => "test idea descript. this is indeed a description"
