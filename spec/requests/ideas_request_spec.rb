@@ -19,11 +19,11 @@ describe "idea page" do
     end
     
     it "should allow creation of a good point"  do
-      pending "correction of adding a point"
       fill_in "good-point-textbox", :with => "gpabc"
       find("#new_good_point").find("input[type=submit]").click
-      visit idea_path @idea # this line should be needed
+      visit idea_path @idea # this line should not be needed
       find("#good_points").should have_content "gpabc"
+      pending "need to correct this test"
     end
   
   end
