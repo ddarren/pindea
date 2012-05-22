@@ -13,6 +13,7 @@ Spork.prefork do
   require 'rspec/rails'
   require 'rspec/autorun'
 
+
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
@@ -40,6 +41,7 @@ Spork.prefork do
     # rspec-rails.
     config.infer_base_class_for_anonymous_controllers = false
   end
+  Capybara.javascript_driver = :selenium
 
 end
 

@@ -36,7 +36,7 @@ describe "home page" do
   
   it "latest ideas to redirect to the idea" do
     idea = FactoryGirl.create :idea
-    visit root_path
+    visit root_path 
     click_on idea.name
     should_be_on_idea_page
   end
