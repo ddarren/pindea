@@ -10,6 +10,7 @@ fantadea.Idea = function(validation)
 		
 		enablePointAppending();
 		enableAjaxPaging();
+		enableTwitterButton();
 		new fantadea.Facebook().parseXFBML();
 
 	};
@@ -38,6 +39,11 @@ fantadea.Idea = function(validation)
 	    $.getScript(this.href);
 	    return false;
 	  });
+	}
+	
+	function enableTwitterButton()
+	{
+	  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 	}
 		
 	that.initialize = initialize;
