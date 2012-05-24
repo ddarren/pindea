@@ -1,6 +1,3 @@
-
-
-
 fantadea.Home = function(validation)
 {
 	var that = {};
@@ -10,8 +7,6 @@ fantadea.Home = function(validation)
 		validation.validate("#idea_description", "if(VAL != '') return true; else return false;", "Your idea needs a description.", true);
 		$('textarea[maxlength]').limitMaxlength();
 		$("#new_site_suggestion").submit(onSiteSuggestionSubmission);
-		$("#idea-examples-link").popover({ placement: 'bottom'});
-		enableHidePopupWhenPageClicked();
 		
 	};
 	
@@ -19,11 +14,6 @@ fantadea.Home = function(validation)
 	{
 		$('#site_suggestion_text').val("");
 	 	$('#site_suggestion_text').attr("placeholder", "Thanks for the feedback!");
-	}
-	
-	function enableHidePopupWhenPageClicked() // needed for phones & tablets
-	{
-		$(body).click(function() { $("#idea-examples-link").popover('hide'); });
 	}
 
 	that.initialize = initialize;
