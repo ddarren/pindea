@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: Fantadea_development
   pool: 5
-  username: postgres
+  username: pindea
   password: SuperTree9
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: Fantadea_test
   pool: 5
-  username: postgres
+  username: pindea
   password: SuperTree9
 
 production:
@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: Fantadea_production
   pool: 5
-  username: Fantadea
+  username: pindea
   password:

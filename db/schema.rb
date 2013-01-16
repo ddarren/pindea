@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(:version => 20120325225424) do
   create_table "bad_points", :force => true do |t|
     t.text     "text"
     t.integer  "idea_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "bad_points", ["idea_id"], :name => "index_bad_points_on_idea_id"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 20120325225424) do
   create_table "consideration_points", :force => true do |t|
     t.text     "text"
     t.integer  "idea_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "consideration_points", ["idea_id"], :name => "index_consideration_points_on_idea_id"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(:version => 20120325225424) do
   create_table "good_points", :force => true do |t|
     t.text     "text"
     t.integer  "idea_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "good_points", ["idea_id"], :name => "index_good_points_on_idea_id"
@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(:version => 20120325225424) do
     t.string   "name"
     t.string   "description", :limit => 512
     t.boolean  "is_private"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "site_suggestions", :force => true do |t|
