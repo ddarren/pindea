@@ -1,1 +1,1 @@
-test wow Ruby on Rails site that allows users to submit ideas and get feedback.
+test wow neat Ruby on Rails site that allows users to submit ideas and get feedback.
